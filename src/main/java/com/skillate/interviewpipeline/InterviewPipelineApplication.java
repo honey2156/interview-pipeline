@@ -3,6 +3,10 @@ package com.skillate.interviewpipeline;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author Mandeep Singh
+ *
+ */
 @SpringBootApplication
 public class InterviewPipelineApplication {
 

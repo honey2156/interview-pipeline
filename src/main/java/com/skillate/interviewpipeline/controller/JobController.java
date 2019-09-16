@@ -3,8 +3,11 @@ package com.skillate.interviewpipeline.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.skillate.interviewpipeline.model.Job;
@@ -14,30 +17,31 @@ import com.skillate.interviewpipeline.model.Job;
  *
  */
 @RestController
+@RequestMapping(value = "/jobs")
 public class JobController {
 
-	@GetMapping
+	@GetMapping()
 	public ResponseEntity<Job> getJobs() {
 		return null;
 	}
 
-	@GetMapping
-	public ResponseEntity<Job> getJob() {
+	@GetMapping(value = "/{jobId}")
+	public ResponseEntity<Job> getJob(@PathVariable("jobId") int jobId) {
 		return null;
 	}
 
 	@PostMapping
-	public ResponseEntity<Job> addJob() {
+	public ResponseEntity<Job> addJob(@RequestBody Job job) {
 		return null;
 	}
 
-	@PutMapping
-	public ResponseEntity<Job> updateJob() {
+	@PutMapping(value = "/{jobId}")
+	public ResponseEntity<Job> updateJob(@PathVariable("jobId") int jobId, @RequestBody Job job) {
 		return null;
 	}
 
-	@DeleteMapping
-	public ResponseEntity<Job> deleteJob() {
+	@DeleteMapping(value = "/{jobId}")
+	public ResponseEntity<Job> deleteJob(@PathVariable("jobId") int jobId) {
 		return null;
 	}
 }

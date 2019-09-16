@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.skillate.interviewpipeline.model.Interview;
@@ -14,6 +15,7 @@ import com.skillate.interviewpipeline.model.Interview;
  *
  */
 @RestController
+@RequestMapping(value = "/interviews")
 public class InterviewController {
 
 	@GetMapping
@@ -21,7 +23,7 @@ public class InterviewController {
 		return null;
 	}
 
-	@GetMapping
+	@GetMapping(value = "/interviewId")
 	public ResponseEntity<Interview> getInterview() {
 		return null;
 	}

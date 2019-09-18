@@ -32,7 +32,7 @@ public class Stage {
 	@ManyToOne
 	private Job job;
 
-	private Stage() {
+	public Stage() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -8,11 +8,9 @@ import com.skillate.interviewpipeline.model.Interview;
  */
 public interface InterviewService {
 
-	public Interview addInterview();
+	public Interview addInterview(int stageId, String interviewName);
 
-	public boolean updateInterviewName();
+	public boolean updateInterviewName(int interviewId, String interviewName);
 
-	public boolean updateInterviewsOrder();
-
-	public boolean deleteInterview();
+	public boolean deleteInterview(int interviewId);
 }

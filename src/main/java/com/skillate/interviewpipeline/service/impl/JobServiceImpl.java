@@ -25,7 +25,15 @@ public class JobServiceImpl implements JobService {
 	public Job createJob(String name) {
 		Job job = new Job();
 		job.setName(name);
-		job.setStages(new LinkedList<Stage>());
+		// Add fixed stages "Offered" and "Hired"
+		LinkedList<Stage> stages = new LinkedList<Stage>();
+		Stage offered = new Stage();
+		offered.setName("Offered");
+		Stage hired = new Stage();
+		hired.setName("Hired");
+		stages.add(offered);
+		stages.add(hired);
+		job.setStages(stages);
 		return jobDao.save(job);
 	}
 
